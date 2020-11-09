@@ -1,0 +1,31 @@
+import React from "react";
+import useArchiveInfiniteScroll from "@frontity/hooks/use-archive-infinite-scroll";
+import { connect, styled } from "frontity";
+import ArchivePage from "./archive-page";
+import Loading from "../loading";
+
+const List = () => {
+  const {
+    pages,
+    isFetching,
+    isError,
+    isLimit,
+    fetchNext
+  } = useArchiveInfiniteScroll({ limit: 0 });
+
+  return (
+    <div>
+      {pages.map(({ Wrapper, key, link }) => (
+        <Wrapper className="wrapper" key={key}>
+          <ArchivePage link={link} />
+        </Wrapper>
+      ))}
+      {isFetching && <Loading />}
+      {isLimit && <button onClick={fetchNext}>Next Page</button>}
+      {isError && <button onClick={fetchNext}>Try Again</button>}
+    </div>
+
+  );
+};
+
+export default connect(List);
