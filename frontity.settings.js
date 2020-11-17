@@ -2,9 +2,9 @@ const settings = {
   "name": "react-wp",
   "state": {
     "frontity": {
-      "url": "website address",
-      "title": "Site Title",
-      "description": "Site description"
+      "url": "https://frontity.captainweb.in",
+      "title": "Chippeo",
+      "description": "Best viral stories on the Web"
     }
   },
   "packages": [
@@ -49,7 +49,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "wordpress-url/wp-json"
+          "api": "https://frontity.captainweb.in/wp-json"
         }
       }
     },
