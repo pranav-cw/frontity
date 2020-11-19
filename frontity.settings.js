@@ -49,7 +49,7 @@ const settings = {
       "name": "@frontity/wp-source",
       "state": {
         "source": {
-          "api": "https://frontity.captainweb.in/wp-json"
+          "api": "https://pwa.captainweb.in/wp-json"
         }
       }
     },
